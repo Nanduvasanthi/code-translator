@@ -1,0 +1,1 @@
+export { JavaToPythonTranslator } from './translator.js';
