@@ -159,41 +159,58 @@ cd code-translator
 
 
 ### 2️⃣ Backend Setup
-bash
+
+```bash
 cd backend
 npm install
 cp .env.example .env
+
+```
+
 Edit the .env file with your credentials:
 
-env
+```bash
 PORT=5000
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+```
+
 Start the backend server:
 
-bash
+```bash
 npm start
-3️⃣ Frontend Setup
-bash
+
+```
+### 3️⃣ Frontend Setup
+```bash
 cd frontend
 npm install
 cp .env.example .env
+
+```
 Edit the .env file:
 
-env
+```bash
 REACT_APP_API_URL=http://localhost:5000
 REACT_APP_GOOGLE_CLIENT_ID=your_google_client_id
+
+```
 Start the frontend:
 
-bash
+```bash
 npm start
-4️⃣ Compilation Service Setup (JDoodle)
-bash
+
+```
+### 4️⃣ Compilation Service Setup (JDoodle)
+```bash
 cd compilation-service
 npm install
 cp .env.example .env
+
+```
 Get your free JDoodle API credentials:
 
 Go to https://www.jdoodle.com/compiler-api/
@@ -203,53 +220,43 @@ Sign up for a free account
 Get your Client ID and Client Secret
 
 Edit the .env file:
-
-env
+```bash
 JD_CLIENT_ID=your_jdoodle_client_id_here
 JD_CLIENT_SECRET=your_jdoodle_client_secret_here
 PORT=3002
 NODE_ENV=development
+
+```
 Start the compilation service:
 
-bash
+```bash
 npm run dev
-5️⃣ Translator Service Setup
-bash
+
+```
+### 5️⃣ Translator Service Setup
+```bash
 cd translator-service
 npm install
 cp .env.example .env
+
+```
 Edit the .env file:
 
-env
+```bash
 PORT=3001
 NODE_ENV=development
+
+```
+
 Start the translator service:
 
-bash
+```bash
+
 npm start
-Environment Variables Reference
-Backend (.env)
-text
-PORT=5000
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/database
-JWT_SECRET=your_super_secret_jwt_key
-JWT_EXPIRE=7d
-GOOGLE_CLIENT_ID=your_google_client_id.apps.googleusercontent.com
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-Frontend (.env)
-text
-REACT_APP_API_URL=http://localhost:5000
-REACT_APP_GOOGLE_CLIENT_ID=your_google_client_id.apps.googleusercontent.com
-Compilation Service (.env)
-text
-JD_CLIENT_ID=your_jdoodle_client_id
-JD_CLIENT_SECRET=your_jdoodle_client_secret
-PORT=3002
-NODE_ENV=development
-Translator Service (.env)
-text
-PORT=3001
-NODE_ENV=development
+
+```
+
+
 API Endpoints
 Compilation Service (Port: 3002)
 Method	Endpoint	Description	Request Body
