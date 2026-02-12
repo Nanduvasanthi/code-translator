@@ -1,297 +1,312 @@
-Code Translator and Compiler Platform
+# Code Translator and Compiler Platform
 
-An AST-based code translation and compilation platform that allows users to translate, compile, and analyze code across Java, Python, and C, with secure authentication, detailed history tracking, and customizable user settings.
+An AST-based code translation and compilation platform that allows users to translate, compile, and analyze code across Java, Python, and C with secure authentication, detailed history tracking, and customizable settings.
 
-This project follows a modular microservice-based architecture to ensure scalability, maintainability, and security.
 
-Features
-Authentication and User Management
 
-User registration and login using Email & Password
+## Key Features
 
-Google OAuth authentication
+### Authentication and User Management
+- Login and registration using Email and Password or Google OAuth
+- OTP verification for new users
+- Forgot password support
+- Secure logout and account deletion
 
-OTP verification for new users
+### Dashboard
+- Displays total translations, compilations, and success rate
+- Shows recent activity
+- Easy navigation between modules
 
-Forgot password and secure password reset
+### Code Translator
+- Supports Java, Python, and C
+- AST-based translation
+- Handles syntax, loops, conditions, arrays, and data types
 
-Secure logout and account deletion
+### Code Compilation
+- Primary: JDoodle API - 100 free compilations per day
+- Fallback: Piston API (when available)
+- Secure sandboxed execution environment
+- Real-time output, error messages, and execution stats
+- Memory and CPU time tracking
+- Supports Python 3, Java 15, C 10.2.0
 
-JWT-based authentication
+### History
+- Stores translation and compilation history
+- Filter by language and status
+- Delete specific or all records
 
-Dashboard
+### Settings
+- Default language preferences
+- Editor font size and theme
+- Profile management
 
-Displays:
+---
 
-Total translations
+## Screenshots
 
-Total compilations
+### Login:
+<img width="1919" height="869" alt="login" src="https://github.com/user-attachments/assets/10f1d2b1-78a7-4e6c-adf9-9c8c34645f7e" />
 
-Success rate
+### Dashboard:
+<img width="1908" height="863" alt="dashboard" src="https://github.com/user-attachments/assets/2f16371c-50d7-49bd-917a-fefb900e5760" />
 
-Recent user activity
+### Translator:
+<img width="1919" height="875" alt="translator" src="https://github.com/user-attachments/assets/8ad5f841-4ce5-4a42-8926-dac74078c71b" />
 
-Navigation to Translator, Compiler, History, and Settings
+### Compiler:
+<img width="1916" height="880" alt="compiler" src="https://github.com/user-attachments/assets/ead4a24d-6e66-4827-bc9c-152d51c47f8f" />
 
-Code Translator
+### History:
+<img width="1919" height="875" alt="history" src="https://github.com/user-attachments/assets/6890841d-74be-43fc-9201-8869a5d909fe" />
 
-Supports:
+---
 
-Java
-
-Python
-
-C
-
-AST-based translation approach
-
-Handles:
-
-Variables and data types
-
-Loops and conditional statements
-
-Arrays and basic logic
-
-Clean and readable output code
-
-Code Compilation
-
-Secure sandboxed execution
-
-Real-time output and error messages
-
-Memory and CPU time usage tracking
-
-Supported languages and versions:
-
-Python 3
-
-Java 15
-
-C (GCC 10.2.0)
-
-Compilation Engines
-
-Primary: JDoodle API (100 free compilations/day)
-
-Fallback: Piston API (used only when available)
-
-History
-
-Stores:
-
-Translation history
-
-Compilation history
-
-Filter by language and execution status
-
-Delete individual or all records
-
-Settings
-
-Default language preferences
-
-Editor theme and font size
-
-Profile management
-
-Project Structure
+## Project Structure
 code-translator/
 │
-├── frontend/                  # React + TypeScript frontend
-│   ├── src/
-│   │   ├── components/         # Reusable UI components
-│   │   ├── pages/              # Application pages
-│   │   ├── services/           # API service handlers
-│   │   └── App.tsx
-│   ├── public/
-│   └── package.json
+├── frontend/
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── services/
+│ │ └── App.tsx
+│ ├── public/
+│ ├── .env.example
+│ └── package.json
 │
-├── backend/                   # Main backend service
-│   ├── models/                 # MongoDB schemas
-│   ├── routes/                 # API routes
-│   ├── controllers/            # Business logic
-│   ├── middleware/             # Auth and validation middleware
-│   └── package.json
+├── backend/
+│ ├── models/
+│ ├── routes/
+│ ├── controllers/
+│ ├── middleware/
+│ ├── .env.example
+│ └── package.json
 │
-├── translator-service/         # AST-based translation service
-│   ├── src/
-│   │   ├── parsers/             # Language parsers
-│   │   ├── generators/          # Code generators
-│   │   └── ast/                 # AST definitions
-│   ├── server.js
-│   └── package.json
+├── translator-service/
+│ ├── src/
+│ │ ├── parsers/
+│ │ ├── generators/
+│ │ └── ast/
+│ ├── server.js
+│ ├── .env.example
+│ └── package.json
 │
-├── compilation-service/        # Code compilation service
-│   ├── src/
-│   │   ├── compilers/
-│   │   │   ├── BaseCompiler.js
-│   │   │   ├── JDoodleCompiler.js
-│   │   │   └── CompilerFactory.js
-│   │   ├── CompilationService.js
-│   │   └── index.js
-│   ├── server.js
-│   ├── .env.example
-│   ├── .gitignore
-│   └── package.json
+├── compilation-service/
+│ ├── src/
+│ │ ├── compilers/
+│ │ │ ├── BaseCompiler.js
+│ │ │ ├── JDoodleCompiler.js
+│ │ │ └── CompilerFactory.js
+│ │ ├── CompilationService.js
+│ │ └── index.js
+│ ├── server.js
+│ ├── .env.example
+│ ├── .gitignore
+│ └── package.json
 │
-├── screenshots/                # Application screenshots
+├── screenshots/
 │
 └── README.md
 
-Tech Stack
+text
 
-Frontend
+---
 
-React
+## Tech Stack
 
-TypeScript
+| Technology | Details |
+|------------|---------|
+| Frontend | React, TypeScript, Tailwind CSS |
+| Backend | Node.js, Express, MongoDB |
+| Authentication | JWT, Google OAuth |
+| Translation | AST-based parser (Custom) |
+| Compilation | JDoodle API (Primary), Piston API (Fallback) |
 
-Tailwind CSS
+---
 
-Backend
+## Prerequisites
 
-Node.js
+- Node.js (v18 or higher)
+- MongoDB (Local or Atlas)
+- Git
+- JDoodle API Account (Free)
 
-Express.js
+---
 
-MongoDB
+## Setup Instructions
 
-Authentication
+### 1. Clone the Repository
 
-JWT
-
-Google OAuth 2.0
-
-Translation
-
-AST-based parsing and generation
-
-Compilation
-
-JDoodle API (Primary)
-
-Piston API (Fallback)
-
-Environment Variables
-
-Environment variables are required for security and configuration.
-They must be stored in .env files and should never be committed to GitHub.
-
-Backend (backend/.env)
-PORT=5000
-MONGODB_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-
-Compilation Service (compilation-service/.env)
-JD_CLIENT_ID=your_jdoodle_client_id
-JD_CLIENT_SECRET=your_jdoodle_client_secret
-PORT=3002
-NODE_ENV=development
-
-Setup Instructions
-Prerequisites
-
-Node.js v18 or higher
-
-MongoDB
-
-Git
-
-1. Clone the Repository
+```bash
 git clone https://github.com/Nanduvasanthi/code-translator.git
 cd code-translator
-
 2. Backend Setup
+bash
 cd backend
 npm install
 cp .env.example .env
+Edit the .env file with your credentials:
 
+env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+Start the backend server:
 
-Edit the .env file and add your MongoDB URI, JWT secret, and Google OAuth credentials.
-
+bash
 npm start
-
-
-Backend runs on: http://localhost:5000
-
 3. Frontend Setup
-cd ../frontend
+bash
+cd frontend
 npm install
+cp .env.example .env
+Edit the .env file:
+
+env
+REACT_APP_API_URL=http://localhost:5000
+REACT_APP_GOOGLE_CLIENT_ID=your_google_client_id
+Start the frontend:
+
+bash
 npm start
-
-
-Frontend runs on: http://localhost:3000
-
-4. Compilation Service Setup
-cd ../compilation-service
+4. Compilation Service Setup (JDoodle)
+bash
+cd compilation-service
 npm install
+cp .env.example .env
+Get your free JDoodle API credentials:
 
+Go to https://www.jdoodle.com/compiler-api/
 
-Create .env file:
+Sign up for a free account
 
-JD_CLIENT_ID=your_jdoodle_client_id
-JD_CLIENT_SECRET=your_jdoodle_client_secret
+Get your Client ID and Client Secret
+
+Edit the .env file:
+
+env
+JD_CLIENT_ID=your_jdoodle_client_id_here
+JD_CLIENT_SECRET=your_jdoodle_client_secret_here
 PORT=3002
 NODE_ENV=development
+Start the compilation service:
 
-
-Start the service:
-
+bash
 npm run dev
-
 5. Translator Service Setup
-cd ../translator-service
+bash
+cd translator-service
 npm install
+cp .env.example .env
+Edit the .env file:
+
+env
+PORT=3001
+NODE_ENV=development
+Start the translator service:
+
+bash
 npm start
-
-API Endpoints (Compilation Service)
-
-Base URL: http://localhost:3002
-
+Environment Variables Reference
+Backend (.env)
+text
+PORT=5000
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/database
+JWT_SECRET=your_super_secret_jwt_key
+JWT_EXPIRE=7d
+GOOGLE_CLIENT_ID=your_google_client_id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+Frontend (.env)
+text
+REACT_APP_API_URL=http://localhost:5000
+REACT_APP_GOOGLE_CLIENT_ID=your_google_client_id.apps.googleusercontent.com
+Compilation Service (.env)
+text
+JD_CLIENT_ID=b1163cdab5b124162ddf79c8a3ddd075
+JD_CLIENT_SECRET=af10c8868c9345c7a73daee76967122e9d49304793f0ab89ff7d4d6745063b94
+PORT=3002
+NODE_ENV=development
+Translator Service (.env)
+text
+PORT=3001
+NODE_ENV=development
+API Endpoints
+Compilation Service (Port: 3002)
+Method	Endpoint	Description	Request Body
+GET	/health	Service health check	-
+GET	/info	Service information	-
+GET	/languages	Supported languages	-
+POST	/compile	Compile code	{ "code": "print('hello')", "language": "python" }
+POST	/test	Test all languages	-
+Backend API (Port: 5000)
 Method	Endpoint	Description
-GET	/health	Service health check
-GET	/info	Service information
-GET	/languages	Supported languages
-POST	/compile	Compile code
-POST	/test	Test all languages
+POST	/api/auth/register	User registration
+POST	/api/auth/login	User login
+POST	/api/auth/google	Google OAuth
+GET	/api/history	Get compilation history
+POST	/api/translate	Translate code
 Current Status
+JDoodle API - Working (100 free compilations per day)
 
-JDoodle API: Working (100 free compilations per day)
+Piston API - Unstable/Offline (Fallback only)
 
-Piston API: Unstable (fallback only)
+Python Support - Working
 
-Python: Supported
+Java Support - Working
 
-Java: Supported
+C Support - Working
 
-C: Supported
+Secure Credentials - Using .env files
 
-Credentials secured using .env
+GitHub Ready - .env files in .gitignore
 
-.env files excluded via .gitignore
+Troubleshooting
+Compilation Service Issues
+JDoodle credentials not working:
+
+Verify your Client ID and Client Secret
+
+Check you have remaining credits (100/day)
+
+Regenerate credentials on JDoodle dashboard
+
+Port already in use:
+
+bash
+# Change port in .env file
+PORT=3003
+MongoDB connection error:
+
+Verify MongoDB is running
+
+Check connection string in .env
+
+Ensure network access is configured
 
 Author
-
 Nandu Vasanthi
+
 GitHub: https://github.com/Nanduvasanthi
 
 Email: nvasanthi2005@gmail.com
 
 License
-
 Educational and personal use only.
 
 Acknowledgments
+JDoodle for providing free compilation API
 
-JDoodle API for code compilation
-
-Piston API for execution engine
+Piston API team for open-source execution engine
 
 Emkc.org for hosting Piston API
 
-Last Updated: February 12,
+React and Node.js communities
+
+Contributing
+This project is for educational purposes. Feel free to fork and experiment.
+
+Last Updated: February 12, 2026
+
+
