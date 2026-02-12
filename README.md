@@ -2,7 +2,7 @@
 
 An AST-based code translation and compilation platform that allows users to translate, compile, and analyze code across Java, Python, and C with secure authentication, detailed history tracking, and customizable settings.
 
----
+
 
 ## Key Features
 
@@ -255,83 +255,3 @@ Start the translator service:
 npm start
 
 ```
-
-
-API Endpoints
-Compilation Service (Port: 3002)
-Method	Endpoint	Description	Request Body
-GET	/health	Service health check	-
-GET	/info	Service information	-
-GET	/languages	Supported languages	-
-POST	/compile	Compile code	{ "code": "print('hello')", "language": "python" }
-POST	/test	Test all languages	-
-Backend API (Port: 5000)
-Method	Endpoint	Description
-POST	/api/auth/register	User registration
-POST	/api/auth/login	User login
-POST	/api/auth/google	Google OAuth
-GET	/api/history	Get compilation history
-POST	/api/translate	Translate code
-Current Status
-JDoodle API - Working (100 free compilations per day)
-
-Piston API - Unstable/Offline (Fallback only)
-
-Python Support - Working
-
-Java Support - Working
-
-C Support - Working
-
-Secure Credentials - Using .env files
-
-GitHub Ready - .env files in .gitignore
-
-Troubleshooting
-Compilation Service Issues
-JDoodle credentials not working:
-
-Verify your Client ID and Client Secret
-
-Check you have remaining credits (100/day)
-
-Regenerate credentials on JDoodle dashboard
-
-Port already in use:
-
-bash
-# Change port in .env file
-PORT=3003
-MongoDB Connection Error:
-
-Verify MongoDB is running
-
-Check connection string in .env
-
-Ensure network access is configured
-
-Author
-Nandu Vasanthi
-
-GitHub: https://github.com/Nanduvasanthi
-
-Email: nvasanthi2005@gmail.com
-
-License
-Educational and personal use only.
-
-Acknowledgments
-JDoodle for providing free compilation API
-
-Piston API team for open-source execution engine
-
-Emkc.org for hosting Piston API
-
-React and Node.js communities
-
-Contributing
-This project is for educational purposes. Feel free to fork and experiment.
-
-Last Updated: February 12, 2026
-
-text
