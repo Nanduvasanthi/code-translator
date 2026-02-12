@@ -1,386 +1,90 @@
+# Code Translator and Compiler Platform
 
-
-\# 🚀 Code Translator \& Compiler Platform
-
-
-
-An \*\*AST-based code translation and compilation platform\*\* that allows users to translate, compile, and analyze code across \*\*Java, Python, and C\*\* with secure authentication, detailed history tracking, and customizable settings.
-
-
+An AST-based code translation and compilation platform that allows users to translate, compile, and analyze code across Java, Python, and C with secure authentication, detailed history tracking, and customizable settings.
 
 ---
 
+## Key Features
 
+### Authentication and User Management
+- Login and registration using Email and Password or Google OAuth
+- OTP verification for new users
+- Forgot password support
+- Secure logout and account deletion
 
-\## 📌 Key Features
+### Dashboard
+- Displays total translations, compilations, and success rate
+- Shows recent activity
+- Easy navigation between modules
 
+### Code Translator
+- Supports Java, Python, and C
+- AST-based translation
+- Handles syntax, loops, conditions, arrays, and data types
 
+### Code Compilation
+- Uses Piston API
+- Secure execution environment
+- Displays output and errors
 
-\### 🔐 Authentication \& User Management
+### History
+- Stores translation and compilation history
+- Filter by language and status
+- Delete specific or all records
 
-\- Login \& Register using \*\*Email/Password\*\* or \*\*Google OAuth\*\*
-
-\- Smart handling of edge cases:
-
-&nbsp; - Email already registered with Google or Email/Password
-
-&nbsp; - Login attempts using wrong authentication method
-
-\- \*\*OTP verification\*\* for new users
-
-\- \*\*Forgot Password\*\* flow (Email + reset link)
-
-\- Secure account deletion and logout
-
-
-
----
-
-
-
-\### 📊 Dashboard
-
-\- Overview of:
-
-&nbsp; - Total translations
-
-&nbsp; - Total compilations
-
-&nbsp; - Success rate
-
-\- Recent user activity
-
-\- Navigation to Translator, Compiler, History, and Settings
-
-
+### Settings
+- Default language preferences
+- Editor font size and theme
+- Profile management
 
 ---
 
+## Screenshots
 
+Create a folder named `screenshots` in the root directory and add the following images:
 
-\### 🔁 Code Translator (AST-Based)
-
-\- Supports \*\*Java, Python, and C\*\*
-
-\- 6 Translation combinations:
-
-&nbsp; - Java ↔ Python
-
-&nbsp; - Java ↔ C
-
-&nbsp; - Python ↔ C
-
-\- Handles:
-
-&nbsp; - Basic syntax
-
-&nbsp; - Data types
-
-&nbsp; - Operators
-
-&nbsp; - Conditions
-
-&nbsp; - Loops
-
-&nbsp; - Arrays
-
-\- Translation is performed using \*\*Abstract Syntax Tree (AST)\*\* parsing
-
-\- Pre-translation compilation to detect errors
-
-
+- screenshots/login.png
+- screenshots/dashboard.png
+- screenshots/translator.png
+- screenshots/compiler.png
+- screenshots/history.png
 
 ---
 
-
-
-\### ⚙️ Code Compilation
-
-\- Uses \*\*Piston API\*\* for secure and isolated code execution
-
-\- Supported languages:
-
-&nbsp; - Java
-
-&nbsp; - Python
-
-&nbsp; - C
-
-\- Displays:
-
-&nbsp; - Compilation errors (if any)
-
-&nbsp; - Program output on success
-
-
-
----
-
-
-
-\### 🕘 History \& Analytics
-
-\- Track all translations and compilations with timestamps
-
-\- View:
-
-&nbsp; - Input code
-
-&nbsp; - Translated code
-
-&nbsp; - Output / Errors
-
-\- Filters:
-
-&nbsp; - Translation / Compilation
-
-&nbsp; - Success / Error
-
-&nbsp; - Language
-
-\- Delete:
-
-&nbsp; - Entire history
-
-&nbsp; - Specific entries
-
-\- View most-used language statistics
-
-
-
----
-
-
-
-\### ⚙️ Settings \& Customization
-
-\- Set default source \& target languages
-
-\- Adjust editor font size (Small / Medium / Large)
-
-\- Change editor color theme
-
-\- View profile details
-
-\- Delete account securely
-
-
-
----
-
-
-
-\## 🏗️ Project Architecture
-
-
-
-```
+## Project Structure
 
 code-translator/
-
-│
-
-├── frontend/                # React + TypeScript + Tailwind
-
-├── backend/                 # Node.js + Express + MongoDB
-
-├── translator-service/      # AST-based translation engine
-
-├── compilation-service/     # Piston API based compilation
-
-└── README.md
-
-```
-
-
+- frontend/
+- backend/
+- translator-service/
+- compilation-service/
+- screenshots/
+- README.md
 
 ---
 
+## Tech Stack
 
-
-\## 🧰 Tech Stack
-
-
-
-\### Frontend
-
-\- React
-
-\- TypeScript
-
-\- Tailwind CSS
-
-\- Vite
-
-
-
-\### Backend
-
-\- Node.js
-
-\- Express.js
-
-\- MongoDB
-
-\- JWT Authentication
-
-
-
-\### Services
-
-\- AST Parsing \& Code Generation
-
-\- Piston API for Compilation
-
-
-
-\### Authentication
-
-\- Google OAuth
-
-\- Email \& Password
-
-\- OTP Verification
-
-
+Frontend: React, TypeScript, Tailwind CSS  
+Backend: Node.js, Express, MongoDB  
+Authentication: JWT, Google OAuth  
+Compilation: Piston API  
 
 ---
 
+## Setup
 
-
-\## ⚙️ Setup Instructions
-
-
-
-\### 1️⃣ Clone the Repository
-
-```bash
-
-git clone https://github.com/Nanduvasanthi/code-translator.git
-
-cd code-translator
-
-```
-
-
-
-\### 2️⃣ Install Dependencies
-
-
-
-\#### Backend
-
-```bash
-
-cd backend
-
-npm install
-
-npm run dev
-
-```
-
-
-
-\#### Translator Service
-
-```bash
-
-cd translator-service
-
-npm install
-
-npm start
-
-```
-
-
-
-\#### Compilation Service
-
-```bash
-
-cd compilation-service
-
-npm install
-
-npm start
-
-```
-
-
-
-\#### Frontend
-
-```bash
-
-cd frontend
-
-npm install
-
-npm run dev
-
-```
-
-
+Clone the repository and install dependencies in each service folder.
 
 ---
 
+## Author
 
-
-\## 🔐 Environment Variables
-
-Create `.env` files in respective services based on `.env.example` (not included for security).
-
-
-
----
-
-
-
-\## 📸 Screenshots (Optional)
-
-\_Add screenshots of dashboard, translator, compiler, and history pages here.\_
-
-
-
----
-
-
-
-\## 🚀 Future Enhancements
-
-\- Support for more languages (C++, JavaScript)
-
-\- Advanced AST optimizations
-
-\- Code formatting \& linting
-
-\- Export history as PDF
-
-\- Collaboration features
-
-
-
----
-
-
-
-\## 👤 Author
-
-\*\*Nandu Vasanthi\*\*  
-
+Nandu Vasanthi  
 GitHub: https://github.com/Nanduvasanthi
 
-
-
 ---
 
+## License
 
-
-\## 📄 License
-
-This project is licensed for educational and personal use.
-
-
-
+Educational and personal use only.
