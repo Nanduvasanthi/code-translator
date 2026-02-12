@@ -1,4 +1,4 @@
-# Code Translator and Compiler Platform
+<img width="1919" height="869" alt="Screenshot 2026-02-12 104501" src="https://github.com/user-attachments/assets/c8d5a486-b8c8-41f0-8d04-8590d75572fc" /># Code Translator and Compiler Platform
 
 An **AST-based code translation and compilation platform** that allows users to translate, compile, and analyze code across Java, Python, and C. Features include secure authentication, detailed history tracking, and customizable settings.
 
@@ -63,7 +63,9 @@ This project provides a **full-stack platform** where users can:
 Create a folder named `screenshots` in the project root and add the following images:
 
 **Login Page**  
-![Login](screenshots/login.png)
+<img width="1919" height="869" alt="Screenshot 2026-02-12 104501" src="https://github.com/user-attachments/assets/f6b6d741-71f3-4f4f-a0ae-38f6d075907e" />
+
+
 
 **Dashboard**  
 ![Dashboard](screenshots/dashboard.png)
