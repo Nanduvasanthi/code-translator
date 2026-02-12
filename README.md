@@ -2,7 +2,6 @@
 
 An AST-based code translation and compilation platform that allows users to translate, compile, and analyze code across Java, Python, and C with secure authentication, detailed history tracking, and customizable settings.
 
----
 
 ## Key Features
 
@@ -40,20 +39,29 @@ An AST-based code translation and compilation platform that allows users to tran
 - Editor font size and theme
 - Profile management
 
----
 
 ## Screenshots
 
-Create a folder named screenshots in the root directory and add the following images:
+## Login:
 
-screenshots/
-  - login.png
-  - dashboard.png
-  - translator.png
-  - compiler.png
-  - history.png
+<img width="1919" height="869" alt="login" src="https://github.com/user-attachments/assets/10f1d2b1-78a7-4e6c-adf9-9c8c34645f7e" />
 
----
+## Dashboard:
+
+<img width="1908" height="863" alt="dashboard" src="https://github.com/user-attachments/assets/2f16371c-50d7-49bd-917a-fefb900e5760" />
+
+## Translator:
+
+<img width="1919" height="875" alt="translator" src="https://github.com/user-attachments/assets/8ad5f841-4ce5-4a42-8926-dac74078c71b" />
+
+## Compiler:
+
+<img width="1916" height="880" alt="compiler" src="https://github.com/user-attachments/assets/ead4a24d-6e66-4827-bc9c-152d51c47f8f" />
+
+## History:
+
+<img width="1919" height="875" alt="history" src="https://github.com/user-attachments/assets/6890841d-74be-43fc-9201-8869a5d909fe" />
+
 
 ## Project Structure
 
@@ -100,7 +108,6 @@ code-translator/
 │
 └── README.md
 
----
 
 ## Tech Stack
 
@@ -110,7 +117,6 @@ Authentication: JWT, Google OAuth
 Translation: AST-based parser
 Compilation: JDoodle API (Primary), Piston API (Fallback)
 
----
 
 ## Setup Instructions
 
