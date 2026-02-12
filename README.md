@@ -2,10 +2,11 @@
 
 An AST-based code translation and compilation platform that allows users to translate, compile, and analyze code across Java, Python, and C with secure authentication, detailed history tracking, and customizable settings.
 
+---
 
 ## Key Features
 
-### Authentication and User Management
+### Authentication & User Management
 - Login and registration using Email and Password or Google OAuth
 - OTP verification for new users
 - Forgot password support
@@ -60,6 +61,41 @@ An AST-based code translation and compilation platform that allows users to tran
 
 ---
 
+## Technologies Used
+
+### Frontend
+- **React 18+** – UI library
+- **TypeScript** – Type safety
+- **Tailwind CSS** – Styling framework
+
+### Backend
+- **Node.js** – JavaScript runtime
+- **Express** – Web framework
+- **MongoDB** – Database
+- **JWT** – Authentication
+- **Google OAuth** – Social login
+
+### Translation Service
+- **AST-based Parser** – Custom built
+- **Abstract Syntax Trees** – Code structure analysis
+- **Multi-language Support** – Java, Python, C
+
+### Compilation Service
+- **JDoodle API** – Primary compiler (100 free/day)
+- **Piston API** – Fallback compiler
+- **Sandboxed Environment** – Secure code execution
+
+---
+
+## Prerequisites
+
+- **Node.js v18+**
+- **MongoDB** (Local or Atlas)
+- **Git**
+- **JDoodle API Account** (Free)
+
+---
+
 ## Project Structure
 code-translator/
 │
@@ -111,35 +147,14 @@ text
 
 ---
 
-## Tech Stack
+## Installation & Setup
 
-| Technology | Details |
-|------------|---------|
-| Frontend | React, TypeScript, Tailwind CSS |
-| Backend | Node.js, Express, MongoDB |
-| Authentication | JWT, Google OAuth |
-| Translation | AST-based parser (Custom) |
-| Compilation | JDoodle API (Primary), Piston API (Fallback) |
-
----
-
-## Prerequisites
-
-- Node.js (v18 or higher)
-- MongoDB (Local or Atlas)
-- Git
-- JDoodle API Account (Free)
-
----
-
-## Setup Instructions
-
-### 1. Clone the Repository
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/Nanduvasanthi/code-translator.git
 cd code-translator
-2. Backend Setup
+2️⃣ Backend Setup
 bash
 cd backend
 npm install
@@ -156,7 +171,7 @@ Start the backend server:
 
 bash
 npm start
-3. Frontend Setup
+3️⃣ Frontend Setup
 bash
 cd frontend
 npm install
@@ -170,7 +185,7 @@ Start the frontend:
 
 bash
 npm start
-4. Compilation Service Setup (JDoodle)
+4️⃣ Compilation Service Setup (JDoodle)
 bash
 cd compilation-service
 npm install
@@ -194,7 +209,7 @@ Start the compilation service:
 
 bash
 npm run dev
-5. Translator Service Setup
+5️⃣ Translator Service Setup
 bash
 cd translator-service
 npm install
@@ -277,6 +292,7 @@ bash
 # Change port in .env file
 PORT=3003
 MongoDB Connection Error:
+
 Verify MongoDB is running
 
 Check connection string in .env
@@ -307,3 +323,4 @@ This project is for educational purposes. Feel free to fork and experiment.
 
 Last Updated: February 12, 2026
 
+text
