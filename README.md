@@ -97,6 +97,8 @@ An AST-based code translation and compilation platform that allows users to tran
 ---
 
 ## Project Structure
+```bash
+
 code-translator/
 │
 ├── frontend/
@@ -143,9 +145,8 @@ code-translator/
 │
 └── README.md
 
-text
+```
 
----
 
 ## Installation & Setup
 
