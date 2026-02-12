@@ -154,7 +154,11 @@ text
 ```bash
 git clone https://github.com/Nanduvasanthi/code-translator.git
 cd code-translator
-2️⃣ Backend Setup
+
+```
+
+
+### 2️⃣ Backend Setup
 bash
 cd backend
 npm install
