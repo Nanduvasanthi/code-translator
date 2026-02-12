@@ -39,6 +39,7 @@ An AST-based code translation and compilation platform that allows users to tran
 - Editor font size and theme
 - Profile management
 
+---
 
 ## Screenshots
 
@@ -57,6 +58,7 @@ An AST-based code translation and compilation platform that allows users to tran
 ### History:
 <img width="1919" height="875" alt="history" src="https://github.com/user-attachments/assets/6890841d-74be-43fc-9201-8869a5d909fe" />
 
+---
 
 ## Project Structure
 code-translator/
@@ -105,6 +107,9 @@ code-translator/
 │
 └── README.md
 
+text
+
+---
 
 ## Tech Stack
 
@@ -116,6 +121,7 @@ code-translator/
 | Translation | AST-based parser (Custom) |
 | Compilation | JDoodle API (Primary), Piston API (Fallback) |
 
+---
 
 ## Prerequisites
 
@@ -124,6 +130,7 @@ code-translator/
 - Git
 - JDoodle API Account (Free)
 
+---
 
 ## Setup Instructions
 
@@ -132,9 +139,8 @@ code-translator/
 ```bash
 git clone https://github.com/Nanduvasanthi/code-translator.git
 cd code-translator
-bash```
-
-
+2. Backend Setup
+bash
 cd backend
 npm install
 cp .env.example .env
@@ -217,8 +223,8 @@ REACT_APP_API_URL=http://localhost:5000
 REACT_APP_GOOGLE_CLIENT_ID=your_google_client_id.apps.googleusercontent.com
 Compilation Service (.env)
 text
-JD_CLIENT_ID=b1163cdab5b124162ddf79c8a3ddd075
-JD_CLIENT_SECRET=af10c8868c9345c7a73daee76967122e9d49304793f0ab89ff7d4d6745063b94
+JD_CLIENT_ID=your_jdoodle_client_id
+JD_CLIENT_SECRET=your_jdoodle_client_secret
 PORT=3002
 NODE_ENV=development
 Translator Service (.env)
@@ -270,8 +276,7 @@ Port already in use:
 bash
 # Change port in .env file
 PORT=3003
-MongoDB connection error:
-
+MongoDB Connection Error:
 Verify MongoDB is running
 
 Check connection string in .env
@@ -301,5 +306,4 @@ Contributing
 This project is for educational purposes. Feel free to fork and experiment.
 
 Last Updated: February 12, 2026
-
 
