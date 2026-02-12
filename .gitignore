@@ -1,29 +1,78 @@
+# ======================
 # Node.js
+# ======================
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-lock.yaml
 
-# Environment variables
+# ======================
+# Environment variables (CRITICAL)
+# ======================
 .env
-.env.local
+.env.*
+backend/.env
+frontend/.env
+translator-service/.env
+compilation-service/.env
 
+# ======================
 # Build output
+# ======================
 dist/
 build/
+.out/
+coverage/
 
+# ======================
+# Temporary / Runtime files
+# ======================
+*.log
+*.tmp
+*.cache
+*.pid
+
+# ======================
 # Python
+# ======================
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
+# ======================
 # Java
+# ======================
 target/
 *.class
 
-# IDEs
+# ======================
+# C / Compilation artifacts
+# ======================
+*.out
+*.exe
+*.o
+*.obj
+compilation-service/*.obj
+
+# ======================
+# IDEs & Editors
+# ======================
 .vscode/
 .idea/
+*.swp
+*.swo
 
+# ======================
 # OS files
+# ======================
 .DS_Store
 Thumbs.db
+
+# ======================
+# Test & debug files
+# ======================
+*.test.js
+*.spec.js
+debug.log
