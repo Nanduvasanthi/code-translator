@@ -68,10 +68,12 @@ Create a folder named `screenshots` in the project root and add the following im
 
 
 **Dashboard**  
-![Dashboard](screenshots/dashboard.png)
+<img width="1908" height="863" alt="image" src="https://github.com/user-attachments/assets/bff9213c-3dcb-42d1-adc5-20c7c182d7a6" />
+
 
 **Code Translator**  
-![Translator](screenshots/translator.png)
+<img width="1919" height="875" alt="image" src="https://github.com/user-attachments/assets/17143912-5c58-43f2-aa61-b160e1e9c71b" />
+
 
 **Code Compiler**  
 ![Compiler](screenshots/compiler.png)
