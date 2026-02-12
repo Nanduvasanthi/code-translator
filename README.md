@@ -3,7 +3,6 @@
 An AST-based code translation and compilation platform that allows users to translate, compile, and analyze code across Java, Python, and C with secure authentication, detailed history tracking, and customizable settings.
 
 
-
 ## Key Features
 
 ### Authentication and User Management
@@ -40,7 +39,6 @@ An AST-based code translation and compilation platform that allows users to tran
 - Editor font size and theme
 - Profile management
 
----
 
 ## Screenshots
 
@@ -59,7 +57,6 @@ An AST-based code translation and compilation platform that allows users to tran
 ### History:
 <img width="1919" height="875" alt="history" src="https://github.com/user-attachments/assets/6890841d-74be-43fc-9201-8869a5d909fe" />
 
----
 
 ## Project Structure
 code-translator/
@@ -108,9 +105,6 @@ code-translator/
 │
 └── README.md
 
-text
-
----
 
 ## Tech Stack
 
@@ -122,7 +116,6 @@ text
 | Translation | AST-based parser (Custom) |
 | Compilation | JDoodle API (Primary), Piston API (Fallback) |
 
----
 
 ## Prerequisites
 
@@ -131,7 +124,6 @@ text
 - Git
 - JDoodle API Account (Free)
 
----
 
 ## Setup Instructions
 
@@ -140,10 +132,9 @@ text
 ```bash
 git clone https://github.com/Nanduvasanthi/code-translator.git
 cd code-translator
-```bash
+bash```
 
-### 2. Backend Setup
-bash
+
 cd backend
 npm install
 cp .env.example .env
