@@ -1,3 +1,6 @@
+// Load environment variables at the very top
+require('dotenv').config();
+
 const CompilationService = require('./CompilationService');
 
 // Create and export the compilation service instance
